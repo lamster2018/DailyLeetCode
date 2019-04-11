@@ -9,6 +9,16 @@ public class TwoSum {
         System.out.println(twoSum(nums, target)[0] + "--" + twoSum(nums, target)[1]);
     }
 
+    /**
+     * 给任一数组和目标值
+     * 求数组内两数和为目标值的 两数下标
+     * 时间复杂度O(n)
+     * 空间复杂度O(n)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     static int[] twoSum(int[] nums, int target) {
         HashMap map = new HashMap<Integer, Integer>();
 
