@@ -5,6 +5,9 @@ public class ReverseInteger {
 
     /**
      * 反转int
+     * int有Integer.Max & Min
+     * 假设int上限123，反转就是321，越界了
+     * 所以要在每一次结果前做判断
      *
      * @param x
      * @return
@@ -12,8 +15,15 @@ public class ReverseInteger {
     public static int reverse(int x) {
         int result = 0;
         while (x != 0) {
-            result = x % 10 + result * 10;
+            int temp = x % 10;
             x = x / 10;
+            if (result > Integer.MAX_VALUE / 10
+                    || (result == Integer.MAX_VALUE / 10 && temp > 7))
+                return 0;
+            if (result < Integer.MIN_VALUE / 10
+                    || (result == Integer.MIN_VALUE / 10 && temp < -8))
+                return 0;
+            result = result * 10 + temp;
         }
         return result;
     }
