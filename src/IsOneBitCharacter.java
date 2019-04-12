@@ -4,6 +4,8 @@
  * 现给一个由若干比特组成的字符串。
  * 问最后一个字符是否必定为一个一比特字符。
  * 给定的字符串总是由0结束。
+ *
+ * https://leetcode-cn.com/problems/1-bit-and-2-bit-characters/
  */
 public class IsOneBitCharacter {
     public static void main(String[] args) {
