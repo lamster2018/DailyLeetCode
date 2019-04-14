@@ -19,7 +19,8 @@ public class AddStrings {
 
     /**
      * 字符串加法、链表加法以及二进制加法之类的都可以转换成char ASCII码去解决
-     *
+     * 每一位取计算ascii值与'0'的差值，
+     * 这里有个好处，就是无所谓两个数的位数是不是一致，或者哪个字符长
      * @param num1
      * @param num2
      * @return

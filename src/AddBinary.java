@@ -16,7 +16,8 @@ public class AddBinary {
      * 二进制的直接加法，从后往前算，进位用flag进行判断
      * 本算法基于ASCII的计算，如果是1，减去'0'的ASCII码值就是1
      * 如果有进位flag则多加1
-     *
+     * ----------
+     * 可以参考AddStrings的算法，最终取%2的余数
      * @param a
      * @param b
      * @return
