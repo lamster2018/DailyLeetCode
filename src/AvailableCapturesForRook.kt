@@ -1,11 +1,19 @@
-import com.sun.xml.internal.fastinfoset.util.CharArray
-
 /**
  * 测试数据的二维数组，kotlin不是很好声明
  * https://leetcode-cn.com/problems/available-captures-for-rook/
  */
 fun main() {
-//    val array:Array<CharArray> = Array<CharArray>[[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".","R",".",".",".","p"],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".","p",".",".",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]
+    var array: Array<CharArray> = arrayOf(
+            charArrayOf('.', '.', '.', '.', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', 'p', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', 'R', '.', '.', '.', 'p'),
+            charArrayOf('.', '.', '.', '.', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', '.', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', 'p', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', '.', '.', '.', '.', '.'),
+            charArrayOf('.', '.', '.', '.', '.', '.', '.', '.')
+    )
+    print("result--" + AvailableCapturesForRook.numRookCaptures(array))
 }
 
 class AvailableCapturesForRook {
