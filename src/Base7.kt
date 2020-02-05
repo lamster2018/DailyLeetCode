@@ -1,6 +1,3 @@
-import com.sun.xml.internal.rngom.parse.host.Base
-import java.lang.StringBuilder
-
 /**
  * 转7进制
  * 数学法，断除递归
@@ -27,10 +24,7 @@ class Base7 {
                 n /= 7
             }
             sb.insert(0, n % 7)
-            if (num < 0) {
-                sb.insert(0, '-')
-            }
-            return sb.toString()
+            return if (num < 0) sb.insert(0, '-').toString() else sb.toString()
         }
     }
 }
