@@ -12,6 +12,8 @@ public class BinaryTreeSearch {
         }
         ArrayDeque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
+        //这个结构，pop是删除头节点，push是加到头结点，
+        // 后进先出
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             System.out.print(node.value + " ");
@@ -19,7 +21,7 @@ public class BinaryTreeSearch {
                 stack.push(node.right);
             }
             if (node.left != null) {
-                stack.push(node.left);//压栈顺序有讲究的，先进后出，所以是左节点后进，待会儿先出
+                stack.push(node.left);
             }
         }
         System.out.print("\n");
@@ -33,6 +35,8 @@ public class BinaryTreeSearch {
         }
         ArrayDeque<TreeNode> queue = new ArrayDeque<>();
         queue.add(root);
+        //remove是删除头结点，add是加到尾节点
+        //先进先出
         while (!queue.isEmpty()) {
             TreeNode node = queue.remove();
             System.out.println("" + node.value);
