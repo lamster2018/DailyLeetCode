@@ -15,12 +15,14 @@ public class AddStrings {
         String a = "100";
         String b = "999";
         System.out.println(addStrings(a, b));
+        System.out.println(addTwoNum());
     }
 
     /**
      * 字符串加法、链表加法以及二进制加法之类的都可以转换成char ASCII码去解决
      * 每一位取计算ascii值与'0'的差值，
      * 这里有个好处，就是无所谓两个数的位数是不是一致，或者哪个字符长
+     *
      * @param num1
      * @param num2
      * @return
@@ -35,5 +37,16 @@ public class AddStrings {
             carry /= 10;
         }
         return sb.toString();
+    }
+
+    public static int addTwoNum() {
+        int a = 12;
+        int b = 7;
+        while (b != 0) {//直到无法进位
+            int tmp = a ^ b;//不带进位的加法
+            b = (a & b) << 1;//得到进位
+            a = tmp;
+        }
+        return a;
     }
 }
