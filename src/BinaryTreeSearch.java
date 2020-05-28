@@ -2,9 +2,27 @@ import mode.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class BinaryTreeSearch {
+    public static void main(String[] args) {
+        post(0, 0, pre.length - 1);
+    }
+
+    private static int[] pre = new int[]{1, 2, 4, 5, 3, 6};
+    private static int[] mid = new int[]{4, 2, 5, 1, 3, 6};
+    //应当输出 4，5，2，6，3，1
+
+    //已知先，中，求后序
+    public static void post(int root, int start, int end) {
+        if (start > end) return;
+        int i = start;
+        while (i < end && mid[i] != pre[root]) i++;  //定位根在中序的位置
+        post(root + 1, start, i - 1);  //递归处理左子树
+        post(root + 1 + i - start, i + 1, end);  //递归处理右子树
+        System.out.println("" + mid[i]);
+    }
 
     //深度遍历，先根节点，左节点，右节点，所以是先序遍历
     public void DepthSearch(TreeNode root) {
