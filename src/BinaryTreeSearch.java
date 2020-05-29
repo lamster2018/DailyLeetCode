@@ -7,21 +7,33 @@ import java.util.LinkedList;
 
 public class BinaryTreeSearch {
     public static void main(String[] args) {
-        post(0, 0, pre.length - 1);
+        post(0, 0, preArr.length - 1);
+        System.out.println("\n");
+        pre(5, 0, postArr.length - 1);
     }
 
-    private static int[] pre = new int[]{1, 2, 4, 5, 3, 6};
-    private static int[] mid = new int[]{4, 2, 5, 1, 3, 6};
-    //应当输出 4，5，2，6，3，1
+    private static int[] preArr = new int[]{1, 2, 4, 5, 3, 6};
+    private static int[] midArr = new int[]{4, 2, 5, 1, 3, 6};
+    private static int[] postArr = new int[]{4, 5, 2, 6, 3, 1};
 
     //已知先，中，求后序
     public static void post(int root, int start, int end) {
         if (start > end) return;
         int i = start;
-        while (i < end && mid[i] != pre[root]) i++;  //定位根在中序的位置
+        while (i < end && midArr[i] != preArr[root]) i++;  //定位根在中序的位置
         post(root + 1, start, i - 1);  //递归处理左子树
         post(root + 1 + i - start, i + 1, end);  //递归处理右子树
-        System.out.println("" + mid[i]);
+        System.out.print(" " + midArr[i]);//后序的输出是最后
+    }
+
+    //已知中，后，求先序
+    public static void pre(int root, int start, int end) {
+        if (start > end) return;
+        int i = start;
+        while (i < end && midArr[i] != postArr[root]) i++;  //定位根在中序的位置
+        System.out.print(" " + midArr[i]);//先序的就先输出访问
+        pre(root - 1 - (end - i), start, i - 1);  //递归处理左子树
+        pre(root - 1, i + 1, end);  //递归处理右子树
     }
 
     //深度遍历，先根节点，左节点，右节点，所以是先序遍历
