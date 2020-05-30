@@ -1,3 +1,5 @@
+package DongTaiGuiHua
+
 /**
  * DP思想：
  * 记录【今天之前买入的最小值】
