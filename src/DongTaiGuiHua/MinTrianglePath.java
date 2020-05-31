@@ -24,6 +24,8 @@ import java.util.List;
  * 一个是中间状态能得出最终结果，
  * 只要满足这两个条件，中间状态的数据结构越简单越好。
  * 有时候二维的问题可以用一维存储中间状态，一维的问题用一两个变量保存中间状态。这种做法叫做状态压缩。
+ * <p>
+ * https://leetcode-cn.com/problems/triangle/submissions/
  */
 public class MinTrianglePath {
     public static void main(String[] args) {
