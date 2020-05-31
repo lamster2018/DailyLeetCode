@@ -1,3 +1,5 @@
+package DongTaiGuiHua;
+
 /**
  * 连续子数组的最大和
  * 输入一个无序的整数数组，求一个子数组，该子数组的和值最大
@@ -35,9 +37,6 @@ public class FindChildArrayMaxValue {
 
     /**
      * https://www.jianshu.com/p/fa1530aafc34
-     *
-     * @param arr
-     * @return
      */
     public static int getMax2(int[] arr) {
         if (arr == null) return 0;
@@ -46,9 +45,9 @@ public class FindChildArrayMaxValue {
 
         for (int i = 0; i < arr.length; i++) {
             pre = Math.max(pre + arr[i], arr[i]);
-            System.out.println("" + pre);
+//            System.out.println("" + pre);
             max = Math.max(max, pre);
-            System.out.println("" + max);
+//            System.out.println("" + max);
         }
         return max;
     }
