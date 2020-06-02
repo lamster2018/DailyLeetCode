@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPattern.Singleton;
 
 /**
  * 1、单例类只能有一个实例。
