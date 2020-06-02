@@ -51,6 +51,15 @@ public class Singleton {
         private static final Singleton INSTANCE = new Singleton();
     }
 
+    /**
+     * 啰嗦一点
+     * 这里涉及类的加载机制，要去看。
+     * 类的加载时机有五种，还是六种
+     * 举个例子，当饿汉的时候，外部使用了Singleton的静态方法，Singleton就被加载了
+     * 此时饿汉就会 init Singleton类，（public static final的filed 不算，因为这算常量）
+     * 但是这种holder方式，只有当外部 主动调用getInstance()方法
+     * 才会导致SingletonHolder类被加载，才会让SingletonHolder的私有变量（无论静态）被初始化
+     */
     public static Singleton getInstance() {
         return SingletonHolder.INSTANCE;
     }
