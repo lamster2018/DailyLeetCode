@@ -1,3 +1,5 @@
+package JianZhi
+
 /**
  * 测试数据的二维数组，kotlin不是很好声明
  * https://leetcode-cn.com/problems/available-captures-for-rook/

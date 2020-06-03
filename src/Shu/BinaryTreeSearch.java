@@ -1,3 +1,5 @@
+package Shu;
+
 import mode.TreeNode;
 
 import java.util.ArrayDeque;
