@@ -1,3 +1,5 @@
+package ZiFuChuan;
+
 import java.util.HashMap;
 import java.util.Map;
 
