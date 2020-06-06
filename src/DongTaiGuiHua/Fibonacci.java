@@ -4,11 +4,11 @@ package DongTaiGuiHua;
  * 类似问题
  * 1.一只青蛙一次可以跳上 1 级台阶，也可以跳上 2 级。求该青蛙跳上一个 n 级的台阶总共有多少种跳法。
  * 2.我们可以用 2*1 的小矩形横着或者竖着去覆盖更大的矩形。请问用 n 个 2*1 的小矩形无重叠地覆盖一个 2*n 的大矩形，总共有多少种方法？
- *
  */
 public class Fibonacci {
     public static void main(String[] args) {
         System.out.println("" + getFibonacciN(6));
+        System.out.println("" + getFibonacci(6));
     }
 
     /**
@@ -24,5 +24,17 @@ public class Fibonacci {
             fn_1 = fn;
         }
         return fn;
+    }
+
+    //动态规划，会把子问题的值存起来
+    private static int getFibonacci(int n) {
+        if (n < 1) return n;
+        int[] fib = new int[n + 1];
+        fib[0] = 0;//可省
+        fib[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        return fib[n];
     }
 }
