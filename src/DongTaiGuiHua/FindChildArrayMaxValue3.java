@@ -1,3 +1,5 @@
+package DongTaiGuiHua;
+
 /**
  * 给一个正整数数组，求最大连续子数组的长度及起点坐标
  *
