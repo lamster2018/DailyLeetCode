@@ -1,14 +1,10 @@
-package mode;
+package Shu;
+
+import mode.TreeNode;
 
 public class BalanceBinaryTree {
-    private class ReturnNode {
-        boolean isB;
-        int depth;
+    public static void main(String[] args) {
 
-        public ReturnNode(int depth, boolean isB) {
-            this.depth = depth;
-            this.isB = isB;
-        }
     }
 
     public boolean isBalance(TreeNode root) {
@@ -26,5 +22,15 @@ public class BalanceBinaryTree {
             return new ReturnNode(0, false);
         }
         return new ReturnNode(Math.max(left.depth, right.depth) + 1, true);
+    }
+
+    private class ReturnNode {
+        boolean isB;
+        int depth;
+
+        public ReturnNode(int depth, boolean isB) {
+            this.depth = depth;
+            this.isB = isB;
+        }
     }
 }
