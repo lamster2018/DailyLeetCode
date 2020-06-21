@@ -29,7 +29,7 @@ public class TopK {
         for (int num : arr) {
             if (pq.size() < k) {//先往里塞k个数
                 pq.offer(num);
-            } else if (num > pq.peek()) {//如果比小根堆的顶还大，就把顶弹出，因为小根堆的顶是最小的，把数塞进去，顶又是新的最大的数，这样存下来的都是最大的数
+            } else if (num > pq.peek()) {//如果比小根堆的顶还大，就把顶弹出，因为小根堆的顶是最小的，把数塞进去，顶又是新的最小的数，这样存下来的都是最大的数
                 pq.poll();
                 pq.offer(num);
             }
