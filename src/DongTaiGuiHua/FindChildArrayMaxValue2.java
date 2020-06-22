@@ -11,8 +11,8 @@ public class FindChildArrayMaxValue2 {
     public static void main(String[] args) {
         int[] arr = new int[]{2, 3, -2, 4};
 //        int[] arr = new int[]{-2, 0, -1};
-        System.out.printf("" + getMax(arr));
-        System.out.printf("" + getMax2(arr));
+        System.out.println("" + getMax(arr));
+        System.out.println("" + getMax2(arr));
     }
 
     //由于存在负数，那么会导致最大的变最小的，最小的变最大的。因此还需要维护当前最小值imin
@@ -37,7 +37,7 @@ public class FindChildArrayMaxValue2 {
     public static int getMax2(int[] arr) {
         if (arr == null) return 0;
         int max = Integer.MIN_VALUE;
-        int pre = 0;//pre用于计算以arr[i]为结尾元素的连续数组的最大和
+        int pre = 0;//pre用于计算以arr[i]为结尾元素的连续数组的最大积
 
         for (int i = 0; i < arr.length; i++) {
             pre = Math.max(pre * arr[i], arr[i]);
