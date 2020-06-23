@@ -7,7 +7,7 @@ package WeiYunSuan;
  * <p>
  * https://leetcode-cn.com/problems/arranging-coins/
  */
-public class ArrangeCoins {
+public class ArrangeCoin {
     public static void main(String[] args) {
         int a = 1804289383;
         System.out.println("" + arrangeCoins(a));

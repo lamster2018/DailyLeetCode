@@ -79,7 +79,7 @@ public class BinaryTreeSearch {
         System.out.print("\n");
     }
 
-    //广度遍历
+    //广度遍历,其实就是横着打印
     public void levelSearch(TreeNode root) {
         if (root == null) {
             System.out.println("empty tree");

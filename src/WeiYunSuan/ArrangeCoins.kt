@@ -1,3 +1,5 @@
+package WeiYunSuan
+
 import kotlin.math.sqrt
 
 /**
